@@ -1,0 +1,126 @@
+:root {
+    --spotify-green: #1db954;
+    --dark-primary: #121212;
+    --dark-secondary: #181818;
+    --dark-contrast: #282828;
+}
+
+body {
+    background: radial-gradient(circle at 20% 20%, #1f1f1f, #0d0d0d 45%), linear-gradient(135deg, #0d0d0d, #181818);
+    min-height: 100vh;
+    font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+.navbar {
+    background: linear-gradient(90deg, #0f0f0f, #1f1f1f);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.brand-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--spotify-green);
+    box-shadow: 0 0 16px rgba(29, 185, 84, 0.8);
+}
+
+.card {
+    background: var(--dark-secondary);
+    border: 1px solid #2e2e2e;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+.table-dark {
+    --bs-table-bg: var(--dark-secondary);
+    --bs-table-striped-bg: #202020;
+    --bs-table-hover-bg: #242424;
+    --bs-table-border-color: #2f2f2f;
+}
+
+.table thead th {
+    border-bottom: 1px solid #2f2f2f;
+}
+
+.btn-spotify {
+    background-color: var(--spotify-green);
+    border-color: var(--spotify-green);
+    color: #0b180c;
+    font-weight: 600;
+}
+
+.btn-spotify:hover {
+    background-color: #18a84c;
+    border-color: #18a84c;
+    color: #0b180c;
+}
+
+.form-control,
+.form-select {
+    background-color: #1e1e1e;
+    border: 1px solid #2f2f2f;
+    color: #f5f5f5;
+}
+
+.form-label {
+    color: #e6e6e6;
+    font-weight: 600;
+}
+
+.form-control::placeholder,
+.form-select::placeholder {
+    color: #aeb0b4;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--spotify-green);
+    box-shadow: 0 0 0 0.2rem rgba(29, 185, 84, 0.25);
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+}
+
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.search-bar input {
+    background-color: #121212;
+}
+
+.cover-thumb {
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.card-gradient {
+    background: linear-gradient(145deg, #181818, #0f0f0f);
+}
+
+.table-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .table-responsive {
+        border-radius: 12px;
+        overflow: hidden;
+    }
+}
